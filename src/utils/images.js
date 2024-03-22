@@ -10,5 +10,7 @@ import tikTokLogo from '@assets/svgs/Tiktok.svg'
 import InstagramLogo from '@assets/svgs/Instagram.svg'
 import RoundedArrow from '@assets/svgs/roundedArrow.svg'
 import Stars from '@assets/svgs/Stars.svg'
+import Hamburger from '@assets/svgs/Hamburger.svg'
+import Close from '@assets/svgs/close.svg'
 
-export { GoogleChromeIcon, WizardLogo, ArrowRight, WizardImage, Grid1, Grid2, Grid3, BlackLogo, tikTokLogo, InstagramLogo, RoundedArrow, Stars };
+export { GoogleChromeIcon, WizardLogo, ArrowRight, WizardImage, Grid1, Grid2, Grid3, BlackLogo, tikTokLogo, InstagramLogo, RoundedArrow, Stars, Hamburger, Close };

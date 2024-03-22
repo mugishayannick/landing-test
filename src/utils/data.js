@@ -1,22 +1,54 @@
 import { Grid1, Grid3, Grid2 } from "./images";
 
 
-export const HeaderLists = [
+export const DesktopHeaderLists = [
     {
         id: 1,
-        title: "Home"
+        title: "Home",
+        url: '/'
     },
     {
         id: 2,
-        title: "Features"
+        title: "Features",
+        url: '/features'
     },
     {
         id: 3,
-        title: "About"
+        title: "About",
+        url: '/about'
     },
     {
         id: 4,
-        title: "Help Center & Community"
+        title: "Help Center & Community",
+        url: '/help'
+    }
+]
+
+export const MobileHeaderLists = [
+    {
+        id: 1,
+        title: "Home",
+        url: '/'
+    },
+    {
+        id: 2,
+        title: "Features",
+        url: '/features'
+    },
+    {
+        id: 3,
+        title: "About",
+        url: '/about'
+    },
+    {
+        id: 4,
+        title: "Help Center & Community",
+        url: '/help'
+    },
+    {
+        id: 5,
+        title: "Login",
+        url: '/login'
     }
 ]
 
@@ -33,7 +65,7 @@ export const GridData = [
     },
     {
         image: Grid3,
-        title: '1. ✅ Done.Article Written',
+        title: '3. ✅ Done.Article Written',
         description: 'Wizardshot carefully crafts the perfect article based off your actions recorded. Just click “Done” and we’ll write up the article in a second.'
     }
 ]
