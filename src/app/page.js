@@ -1,44 +1,8 @@
 import Image from "next/image";
 import { Lemon } from "next/font/google";
-import { GoogleChromeIcon, WizardLogo, ArrowRight, WizardImage, Grid1, Grid3, Grid2, InstagramLogo, BlackLogo, tikTokLogo } from "@utils/images";
+import { GoogleChromeIcon, WizardLogo, ArrowRight, WizardImage, RoundedArrow, InstagramLogo, BlackLogo, tikTokLogo, Stars } from "@utils/images";
 import Faq from "src/components/Faq";
-
-const HeaderLists = [
-  {
-    id: 1,
-    title: "Home"
-  },
-  {
-    id: 2,
-    title: "Features"
-  },
-  {
-    id: 3,
-    title: "About"
-  },
-  {
-    id: 4,
-    title: "Help Center & Community"
-  }
-]
-
-const GridData = [
-  {
-    image: Grid1,
-    title: '1. Click Capture',
-    description: 'Once you install the Chrome extension, fire it up, and click “Capture”.'
-  },
-  {
-    image: Grid2,
-    title: '2. Perform Your Actions',
-    description: 'Once capturing, Wizardshot carefully monitors what you do to understand how to document it.'
-  },
-  {
-    image: Grid3,
-    title: '1. ✅ Done.Article Written',
-    description: 'Wizardshot carefully crafts the perfect article based off your actions recorded. Just click “Done” and we’ll write up the article in a second.'
-  }
-]
+import { HeaderLists, GridData } from "@utils/data";
 
 const lemon = Lemon({ subsets: ["latin"], weight: '400' });
 
@@ -74,7 +38,11 @@ export default function Home() {
             <span>Install Wizardshot</span>
             <Image src={ArrowRight} alt="Arrow Right" />
           </button>
-          <div className="w-[1019px] p-1.5 rounded-lg mt-10 h-[600px] bg-gradient-to-b from-[#AB96F8] to-[#FF99D0]">
+          <div className="w-[1019px] relative p-1.5 rounded-lg mt-10 h-[600px] bg-gradient-to-b from-[#AB96F8] to-[#FF99D0]">
+            <div className="flex">
+              <Image src={RoundedArrow} alt="rounded arrow" className="absolute -left-5 -top-7" />
+              <span className="absolute -top-10 left-4 text-lg font-bold tracking-widest max-w-xs leading-none">It only takes 3 clicks to publish your first tutorial</span>
+            </div>
             <Image src={WizardImage} alt="Wizard Image" className="object-cover w-full h-full rounded-lg" />
           </div>
         </div>
@@ -137,19 +105,27 @@ export default function Home() {
             <div>
               <h1 className="text-2xl text-center">“Has helped us write help docs 100x faster” <span className="block">– Dany River, Cartier Informatie</span></h1>
             </div>
+            <div className="flex gap-2">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Image key={index} src={Stars} alt="Stars Logo" />
+              ))}
+            </div>
           </div>
         </div>
         <Faq />
-        <div className="mt-32 border-black px-6 mx-9 border-b-2">
-          <div className="flex p-12 items-center justify-between w-full h-32 bg-black">
-            <div className="max-w-lg">
-              <h1 className="text-white text-3xl pb-2">Create Tutorials in 3 Clicks.</h1>
-              <span className="text-white/50 text-sm">With WizardShot, You Click Capture, And We’ll Capture What’s Happening on Your Screen And Turn It Into A Tutorial.</span>
+        <div className="mt-32">
+          <span className={`text-sm text-right px-6 mx-9 block ${lemon.className} whitespace-nowrap`}>100% free, forever 🤑</span>
+          <div className="border-black px-6 mx-9 border-b-2">
+            <div className="flex p-12 items-center justify-between w-full h-32 bg-black">
+              <div className="max-w-lg">
+                <h1 className="text-white text-3xl pb-2">Create Tutorials in 3 Clicks.</h1>
+                <span className="text-white/50 text-sm">With WizardShot, You Click Capture, And We’ll Capture What’s Happening on Your Screen And Turn It Into A Tutorial.</span>
+              </div>
+              <button className="flex gap-2 items-center text-white">
+                <span className="text-base font-normal underline">Try Wizardshot</span>
+                <Image src={ArrowRight} alt="Arrow Right" />
+              </button>
             </div>
-            <button className="flex gap-2 items-center text-white">
-              <span className="text-base font-normal underline">Try Wizardshot</span>
-              <Image src={ArrowRight} alt="Arrow Right" />
-            </button>
           </div>
         </div>
         <div className="flex mx-16 justify-between mt-20">

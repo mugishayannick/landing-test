@@ -8,5 +8,7 @@ import Grid3 from '@assets/images/grid3.png'
 import BlackLogo from '@assets/svgs/blackLogo.svg'
 import tikTokLogo from '@assets/svgs/Tiktok.svg'
 import InstagramLogo from '@assets/svgs/Instagram.svg'
+import RoundedArrow from '@assets/svgs/roundedArrow.svg'
+import Stars from '@assets/svgs/Stars.svg'
 
-export { GoogleChromeIcon, WizardLogo, ArrowRight, WizardImage, Grid1, Grid2, Grid3, BlackLogo, tikTokLogo, InstagramLogo };
+export { GoogleChromeIcon, WizardLogo, ArrowRight, WizardImage, Grid1, Grid2, Grid3, BlackLogo, tikTokLogo, InstagramLogo, RoundedArrow, Stars };
